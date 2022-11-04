@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		.play {
+			width: 250px;
+			height: 250px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<audio src="http://www.segenswelle.de:8000/deutsch" controls="controls" autoplay>Browser does not support audio</audio>
+
+<div class="player">
+	<img />
+	<div class="play"></div>
+
+</div>
+
+<script>
+	var a = $("audio")[0];
+	$(".play").on("click", function() {
+		if (a.paused)
+			a.play();
+		else
+			a.pause();
+	});
+</script>
+</body>
+</html>
